@@ -1,0 +1,100 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+img {
+  width: 90px;
+  object-fit: contain;
+  max-height: 180%;
+}
+
+/* Navigation Links */
+.navbar-links {
+  display: flex;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #464545;
+  font-weight: 550; /* Changed from 500 to 700 for bold */
+  font-size: 15px; /* Changed from 13px to 16px for bigger */
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar-links a:hover {
+  color: #0133CCFF;
+}
+
+/* Connexion Button */
+.connexion-button {
+  font-family: 'Poppins', sans-serif;
+  padding: 5px 10px;
+  background-color: #0133CCFF;
+  color: #fff;
+  border-radius: 3px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 13px;
+  transition: background 0.3s ease;
+}
+
+.connexion-button:hover {
+  background-color: #012694FF;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 8px;
+  }
+
+  /* Hide links on small screens */
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 4px 0;
+  }
+
+  .navbar-links a {
+    padding: 6px;
+    text-align: center;
+    display: block;
+  }
+
+  /* Show the menu when active */
+  .navbar-links.active {
+    display: flex;
+  }
+
+  /* Hamburger Menu */
+  .menu-icon {
+    display: block;
+    font-size: 18px;
+    cursor: pointer;
+  }
+}
+
+/* Show navbar links again on large screens */
+@media (min-width: 769px) {
+  .menu-icon {
+    display: none;
+  }
+
+  .navbar-links {
+    display: flex !important;
+  }
+}
