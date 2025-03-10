@@ -261,6 +261,9 @@ body{
 .input-container input {
     padding-right: 40px; 
 }
+.invisible{
+    display: none;
+}
 @media (max-width: 768px) {
     .input-container i {
         right: 10px;
@@ -316,5 +319,8 @@ body{
     } 
     .login-signup-span{
         display: inline;
+    } 
+    .user-type{
+        margin-top: 20px;
     }      
 }
