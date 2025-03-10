@@ -25,6 +25,7 @@ body{
     width: 768px;
     max-width: 100%;
     min-height: 480px;
+    height: 70%;
 }
 
 .container p{
@@ -215,7 +216,8 @@ body{
     height: 40px;
     background: #eee;
     border-radius: 8px;
-    margin: 8px 0;
+    margin: 8px 0px;
+    margin-top: 20px;
 }
 
 .Tbutton {
