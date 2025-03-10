@@ -7,6 +7,7 @@ const nameInput = document.getElementById('name');
 const btn = document.getElementById('btn');
 const toggleSignUp = document.getElementById('toggleSignUp');
 const toggleSignIn = document.getElementById('toggleSignIn');
+const userlogo = document.getElementById('user-logo');
 
 registerBtn.addEventListener('click', () => {
     container.classList.add("active");
@@ -22,6 +23,7 @@ studentBtn.addEventListener('click', (e) => {
     btn.style.left = '0';
     studentBtn.classList.add('active');
     companyBtn.classList.remove('active');
+    userlogo.classList.remove('fa-building');
 });
 
 companyBtn.addEventListener('click', (e) => {
@@ -30,19 +32,16 @@ companyBtn.addEventListener('click', (e) => {
     btn.style.left = '50%';
     companyBtn.classList.add('active');
     studentBtn.classList.remove('active');
+    companyBtn.classList.add('visible');
+    userlogo.classList.add('fa-building');
 });
 
-if (toggleSignUp && toggleSignIn) {
-    toggleSignUp.addEventListener('click', (e) => {
-        e.preventDefault();
-        container.classList.add("activeb");
-    });
 
 toggleSignIn.addEventListener('click', (e) => {
         e.preventDefault();
         container.classList.remove("activeb");
     });
-}
+
 toggleSignUp.addEventListener('click', (e) => {
     e.preventDefault();
     container.classList.add("activeb");

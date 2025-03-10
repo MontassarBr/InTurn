@@ -115,7 +115,9 @@ body{
     z-index: 5;
     animation: move 0.6s;
 }
-
+.login-signup-span{
+    display: none;
+}
 @keyframes move{
     0%, 49.99%{
         opacity: 0;
@@ -310,11 +312,9 @@ body{
     .container.activeb .sign-up{
         opacity: 1;
         z-index: 6;
-        animation: move 0.6s;
-    }
-    .container.activeb .sign-in{
-        opacity: 0;
-        z-index: 1;
-        animation: move 0.6s;
-    }       
+        transition: all 0.6s ease-in-out;
+    } 
+    .login-signup-span{
+        display: inline;
+    }      
 }

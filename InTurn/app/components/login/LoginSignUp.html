@@ -13,7 +13,7 @@
 
     <div class="container" id="container">
         <div class="form-container sign-up">
-            <form>
+            <form method="get" action="register.php">
                 <h1>Create Account</h1>
                 <div class="user-type">
                     <div id="btn"></div>
@@ -29,7 +29,7 @@
                 <span>or use your email for registeration</span>
                 <div class="input-container">
                     <input type="text" placeholder="Name" id="name">
-                    <i class="fa-solid fa-user"></i>
+                    <i class="fa-solid  fa-user" id="user-logo"></i>
                 </div>
                 <div class="input-container">
                 <input type="email" placeholder="Email">
@@ -39,8 +39,8 @@
                 <input type="password" placeholder="Password">
                 <i class="fa-solid fa-lock"></i></div>
                 <div class="mobile-toggle">
-                    <span>Already have an account? </span>
-                    <a href="#" id="toggleSignIn">Sign In</a>
+                    <span class="login-signup-span">Already have an account? </span>
+                    <a href="#" id="toggleSignIn" class="login-signup-span">Sign In</a>
                 </div>
                 
                 <button primary-btn>Sign Up</button>
@@ -64,8 +64,8 @@
                 <i class="fa-solid fa-lock"></i></div>
             
 <div class="mobile-toggle">
-    <span>Don't have an account? </span>
-    <a href="#" id="toggleSignUp">Sign Up</a>
+    <span class="login-signup-span">Don't have an account? </span>
+    <a href="#" id="toggleSignUp" class="login-signup-span">Sign Up</a>
 </div>
                 <button class="primary-btn">Sign In</button>
             </form>
