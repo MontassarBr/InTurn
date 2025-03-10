@@ -5,6 +5,9 @@ const companyBtn = document.getElementById('company');
 const studentBtn = document.getElementById('student');
 const nameInput = document.getElementById('name');
 const btn = document.getElementById('btn');
+const toggleSignUp = document.getElementById('toggleSignUp');
+const toggleSignIn = document.getElementById('toggleSignIn');
+
 registerBtn.addEventListener('click', () => {
     container.classList.add("active");
 });
@@ -13,42 +16,34 @@ loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });
 
-// Function to toggle user type and change placeholder
-
-studentBtn.addEventListener('click', () => {
-    nameInput.setAttribute('placeholder', 'Name');
-});
-
-companyBtn.addEventListener('click', () => {
-    nameInput.setAttribute('placeholder', 'Company Name');
-});
-
-
-studentBtn.addEventListener('click', () => {
+studentBtn.addEventListener('click', (e) => {
+    e.preventDefault(); 
     nameInput.setAttribute('placeholder', 'Name');
     btn.style.left = '0';
     studentBtn.classList.add('active');
     companyBtn.classList.remove('active');
 });
 
-companyBtn.addEventListener('click', () => {
+companyBtn.addEventListener('click', (e) => {
+    e.preventDefault(); 
     nameInput.setAttribute('placeholder', 'Company Name');
     btn.style.left = '50%';
     companyBtn.classList.add('active');
     studentBtn.classList.remove('active');
 });
-// Add this to your existing script
-const toggleSignUp = document.getElementById('toggleSignUp');
-const toggleSignIn = document.getElementById('toggleSignIn');
 
 if (toggleSignUp && toggleSignIn) {
     toggleSignUp.addEventListener('click', (e) => {
         e.preventDefault();
-        container.classList.add("active");
+        container.classList.add("activeb");
     });
 
-    toggleSignIn.addEventListener('click', (e) => {
+toggleSignIn.addEventListener('click', (e) => {
         e.preventDefault();
-        container.classList.remove("active");
+        container.classList.remove("activeb");
     });
 }
+toggleSignUp.addEventListener('click', (e) => {
+    e.preventDefault();
+    container.classList.add("activeb");
+});
