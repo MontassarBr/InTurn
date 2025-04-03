@@ -6,7 +6,6 @@ import { FaBars } from "react-icons/fa"; // Hamburger icon
 import "./NavbarAfterLogin.css";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import axios from "axios";
 
 const NavbarAfterLogin: React.FC = () => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
@@ -32,21 +31,28 @@ const NavbarAfterLogin: React.FC = () => {
           return;
         }
         
-        // Fetch user data from the backend
-        const response = await axios.get('/api/user/profile', {
+        // Fetch user data from the backend using native fetch
+        const response = await fetch('/api/user/profile', {
+          method: 'GET',
           headers: {
-            Authorization: `Bearer ${token}`
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
           }
         });
         
-        setUserData(response.data);
+        if (!response.ok) {
+          // If response is not ok (e.g., 401 Unauthorized)
+          if (response.status === 401) {
+            localStorage.removeItem('authToken');
+            router.push('/login');
+          }
+          throw new Error('Failed to fetch user data');
+        }
+        
+        const data = await response.json();
+        setUserData(data);
       } catch (error) {
         console.error('Error fetching user data:', error);
-        // Handle authentication errors
-        if (axios.isAxiosError(error) && error.response?.status === 401) {
-          localStorage.removeItem('authToken');
-          router.push('/login');
-        }
       } finally {
         setLoading(false);
       }
@@ -71,12 +77,19 @@ const NavbarAfterLogin: React.FC = () => {
       // Get the token from localStorage
       const token = localStorage.getItem('authToken');
       
-      // Send logout request to the backend
-      await axios.post('/api/auth/logout', {}, {
+      // Send logout request to the backend using native fetch
+      const response = await fetch('/api/auth/logout', {
+        method: 'POST',
         headers: {
-          Authorization: `Bearer ${token}`
-        }
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({}) // Empty body or you can add any required data
       });
+      
+      if (!response.ok) {
+        throw new Error('Logout failed');
+      }
       
       // Clear authentication token and user data from client storage
       localStorage.removeItem('authToken');
@@ -100,11 +113,17 @@ const NavbarAfterLogin: React.FC = () => {
       const token = localStorage.getItem('authToken');
       
       // You could prefetch detailed profile data here if needed
-      await axios.get('/api/user/detailed-profile', {
+      const response = await fetch('/api/user/detailed-profile', {
+        method: 'GET',
         headers: {
-          Authorization: `Bearer ${token}`
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
         }
       });
+      
+      if (!response.ok) {
+        throw new Error('Failed to fetch profile data');
+      }
       
       // Navigate to profile page
       router.push('/profile');
