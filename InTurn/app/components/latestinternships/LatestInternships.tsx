@@ -1,83 +1,89 @@
-import React from 'react';
+'use client'
+import React, { useState, useEffect } from 'react';
 import './LatestInternships.css';
-import InternshipCard from '../InternshipCard/InternshipCard'
+import InternshipCard from '../InternshipCard/InternshipCard';
 
-const internships = [
-    {
-      id: 1,
-      title: 'UI / UX Intern',
-      company: 'Samsung',
-      location: 'Chargueya , Tunis',
-      salary: '100-200 DT',
-      type: 'Onsite',
-      logo: '/images/samsung.png', 
-    },
-    {
-      id: 2,
-      title: 'C# Developer Intern',
-      company: 'AISYSNEXT',
-      location: 'Lac 2 , Tunis',
-      salary: '250-300 DT',
-      type: 'Hybrid',
-      logo: '/images/aisysnext.png', 
-    },
-    {
-      id: 3,
-      title: 'ReactJS Developer Intern',
-      company: 'LineData',
-      location: 'Lac 2 , Tunis',
-      salary: 'Unpaid',
-      type: 'Remote',
-      logo: '/images/linedata.png', 
-    },
-    {
-      id: 4,
-      title: 'UI / UX Intern',
-      company: 'NeoXam',
-      location: 'Ezzahra , Tunis',
-      salary: 'Unpaid',
-      type: 'Onsite',
-      logo: '/images/neoxam4.png', 
-    },
-    {
-      id: 5,
-      title: 'Financial Analyst Intern',
-      company: 'Talan',
-      location: 'Lac 1 , Tunis',
-      salary: '150-350 DT',
-      type: 'Hybrid',
-      logo: '/images/talan.png', 
-    },
-    {
-      id: 6,
-      title: 'Sales Intern',
-      company: 'Cynoia',
-      location: 'Lac 2 , Tunis',
-      salary: '400-450 DT',
-      type: 'Remote',
-      logo: '/images/cynoia.png', 
-    },
-    // Add more internships as needed
-  ];
+
+// Define the interface for the internship object
+interface Internship {
+  id: number;
+  title: string;
+  company: string;
+  location: string;
+  minSalary: number;
+  maxSalary: number;
+  type: string;
+  logo: string;
+}
+
 const LatestInternships: React.FC = () => {
-  // Get the last 6 internships (or fewer if there are less than 6)
+  // State to store fetched internships
+  const [internships, setInternships] = useState<Internship[]>([]);
+  // State to track loading status
+  const [isLoading, setisLoading] = useState<boolean>(true);
+  // State to track error status
+  const [error, setError] = useState<string | null>(null);
+
+  // Fetch internships when component mounts
+  useEffect(() => {
+    const fetchInternships = async () => {
+      try {
+        setisLoading(true);
+
+        const response = await fetch(`https://api.yourbackend.com/latestInternships/`);
+        const jsonData = await response.json();
+        setInternships(jsonData);
+      } catch (err) {
+        setError('Failed to load internships');
+      } finally {
+        setisLoading(false);
+      }
+    };
+
+    fetchInternships();
+  }, []); // Empty dependency array means this effect runs once on mount
+
+  // Get the latest internships (up to 6)
   const latestInternships = internships.slice(0, 6);
 
   return (
-    <div className="latest-internships">
-      {/* Section Title and Description */}
-      <h1 className="section-title">Latest Internships</h1>
-      <p className="section-description">
-        Explore the most recently posted internship opportunities.
-      </p>
+    <>
+      <div className="latest-internships">
+        {/* Section Title and Description */}
+        <h1 className="section-title">Latest Internships</h1>
+        <p className="section-description">
+          Explore the most recently posted internship opportunities.
+        </p>
 
-      {/* Internship Cards Grid */}
-      <div className="internship-grid">
-        {latestInternships.map((internship) => (
-          <InternshipCard key={internship.id} internship = {internship} />
-        ))}
+        {/* Loading State */}
+        {isLoading && (
+          <div className="loading-state">
+            <p>Loading latest internships...</p>
+          </div>
+        )}
+
+        {/* Error State */}
+        {error && (
+          <div className="error-state">
+            <p>{error}</p>
+          </div>
+        )}
+
+        {/* Internship Cards Grid */}
+        {!isLoading && !error && (
+          <div className="internship-grid">
+            {latestInternships.length > 0 ? (
+              latestInternships.map((internship) => (
+                <InternshipCard key={internship.id} internship={internship} />
+              ))
+            ) : (
+              <p className="no-internships">No internships available at the moment.</p>
+            )}
+          </div>
+        )}
       </div>
-    </div>
+      <br />
+    </>
   );
 };
 
