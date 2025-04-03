@@ -31,7 +31,8 @@
   justify-items: center; /* Center items horizontally within grid cells */
 }
 
-/* Mobile: Show 1 card per row */
+ /*Media query for smaller screens*/
+ 
 @media (max-width: 768px) {
   .internship-grid {
     grid-template-columns: 1fr; /* 1 card per row */
