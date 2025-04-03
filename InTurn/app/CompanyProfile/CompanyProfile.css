@@ -1,0 +1,377 @@
+/* Main container */
+.company-profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #333;
+  padding: 1rem;
+}
+
+/* Main content padding */
+.profile-content {
+  padding: 2rem;
+}
+
+/* Section container */
+.profile-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+/* Two-column layout for larger screens */
+.two-column-layout {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Left column - company description */
+.left-column {
+  flex: 2; /* Takes 2/3 of the space */
+}
+
+/* Right column - feedback section */
+.right-column {
+  flex: 1; /* Takes 1/3 of the space */
+}
+
+/* Gallery styles in left column */
+.left-column .company-gallery {
+  margin-top: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.left-column .gallery-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.left-column .gallery-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.8rem;
+  overflow: hidden;
+  position: relative;
+  min-height: 180px;
+}
+
+.left-column .gallery-item {
+  width: calc(50% - 0.4rem);
+  height: 180px;
+}
+
+.left-column .gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation arrows */
+.left-column .gallery-arrow-container {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 0 1rem;
+  z-index: 10;
+}
+
+.left-column .gallery-arrow-btn {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: #1877f2;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.left-column .gallery-arrow-btn:hover:not(.disabled) {
+  background-color: white;
+  color: #166fe5;
+  transform: scale(1.1);
+}
+
+.left-column .gallery-arrow-btn.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Responsive layout - stacks columns on mobile */
+@media (max-width: 768px) {
+  .profile-content {
+    padding: 0 0.5rem;
+  }
+  
+  .profile-sections {
+    gap: 1.5rem;
+  }
+  
+  .two-column-layout {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .left-column,
+  .right-column {
+    flex: none;
+    width: 100%;
+  }
+
+  .left-column .company-gallery {
+    margin-top: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .left-column .gallery-item {
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .left-column .gallery-item {
+    height: 140px;
+  }
+  
+  .left-column .gallery-arrow-btn {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* --- Visual Enhancements --- */
+
+/* Improve spacing and readability */
+h1, h2, h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* Company profile header */
+.company-profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.company-profile-header .company-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-top: 1rem;
+}
+
+.company-profile-header .location,
+.company-profile-header .work-days {
+  color: #666;
+  font-size: 1rem;
+  margin: 0.2rem 0;
+}
+
+.company-profile-header .website {
+  font-size: 1rem;
+  color: #1877f2;
+  text-decoration: none;
+  margin-top: 0.5rem;
+}
+
+.company-profile-header .website:hover {
+  text-decoration: underline;
+}
+
+/* Company description styles */
+.company-description {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.company-description h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.company-description p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Why Choose Us list */
+.company-description .why-choose-us {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.company-description .why-choose-us li {
+  font-size: 1rem;
+  color: #333;
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.company-description .why-choose-us li::before {
+  content: "✔";
+  color: #1877f2;
+  margin-right: 0.5rem;
+}
+
+/* Feedback section styling */
+.company-feedback {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.company-feedback .feedback-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.company-feedback .rating-summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.company-feedback .stars {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.company-feedback .star {
+  color: #ffc107; /* Gold color for stars */
+  font-size: 1.2rem;
+}
+
+.company-feedback .star.empty {
+  color: #e0e0e0; /* Light grey for empty stars */
+}
+
+.company-feedback .average {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.company-feedback .total-reviews {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Button styling */
+.see-all-btn {
+  display: block;
+  margin-top: 1.5rem;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 1px solid #1877f2;
+  color: #1877f2;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.see-all-btn:hover {
+  background: #f0f7ff;
+}
+
+/* Footer styling */
+footer {
+  background-color: #f1f1f1;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+  border-radius: 6px;
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Internship list */
+.internship-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.internship-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  text-align: center;
+}
+
+.internship-card img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.internship-card h4 {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.internship-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.internship-card .salary {
+  color: #1877f2;
+  font-weight: 600;
+}
+
+/* Adjust button for internships */
+.internship-list .see-all-btn {
+  margin-top: 1.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #1877f2;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.internship-list .see-all-btn:hover {
+  background-color: #166fe5;
+}
