@@ -1,0 +1,69 @@
+/* Application Delivery Form */
+.application-delivery-form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+.application-delivery-form h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Radio and Input Container */
+.radio-and-input-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.radio-buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+}
+
+.radio-buttons label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.radio-buttons input[type='radio'] {
+  margin: 0;
+}
+
+.radio-and-input-container input[type='text'] {
+  flex: 1;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.radio-and-input-container input[type='text']:focus {
+  border-color: #0133cc;
+  box-shadow: 0 0 0 3px rgba(1, 51, 204, 0.1);
+  background-color: #fff;
+}
+
+/* Error Message */
+.error-message {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #ff4d4f;
+}
