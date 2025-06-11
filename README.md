@@ -48,6 +48,32 @@ Certainly! Here's the full **README.md** documentation in **one complete text** 
 
 > 🗂 The source code is located in the `InTurn_pfa/` directory.
 
+## 📸 Screenshots
+
+### 🔐 Login Page  
+![Login Page](screenshots/login.png)
+
+### 🏠 Homepage (Student View)  
+![Student Homepage](screenshots/student_home.png)
+
+### 📝 Internship Offer Page  
+![Internship Offer Page](screenshots/offers.png)
+
+### 📊 Student Dashboard  
+![Student Dashboard](screenshots/student_dashboard.png)
+
+### 👤 Student Profile  
+![Student Profile](screenshots/profile.png)
+
+### ✏️ Edit Profile Page  
+![Edit Profile Page](screenshots/edit_profile.png)
+
+### 🏢 Company Dashboard  
+![Company Dashboard](screenshots/company_dashboard.png)
+
+### 🧾 Company Profile  
+![Company Profile](screenshots/company_profile.png)
+
 ### Prerequisites
 
 - Node.js & npm  
