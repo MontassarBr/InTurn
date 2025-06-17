@@ -152,4 +152,4 @@ Through this project, we developed strong skills in:
 
 This project is intended for academic and learning purposes only.
 All rights reserved © 2025.
-```
+
