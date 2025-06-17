@@ -1,8 +1,4 @@
-Certainly! Here's the full **README.md** documentation in **one complete text** — with all sections (overview, features, setup steps, authors, license) — ready to copy and paste directly into your GitHub repository:
 
----
-
-````markdown
 # InTurn – Internship Management Platform
 
 > 🚀 A full-stack web platform developed to simplify and optimize the internship application and recruitment process for students and companies.
@@ -50,29 +46,29 @@ Certainly! Here's the full **README.md** documentation in **one complete text** 
 
 ## 📸 Screenshots
 
-### 🔐 Login Page  
-![Login Page](screenshots/login.png)
+### 🔐 SignUp Page  
+<img src="screenshots/login.png" alt="Login Page" height="600" />
 
 ### 🏠 Homepage (Student View)  
-![Student Homepage](screenshots/student_home.png)
+<img src="screenshots/student_home.png" alt="Student Homepage" height="600" />
 
 ### 📝 Internship Offer Page  
-![Internship Offer Page](screenshots/offers.png)
+<img src="screenshots/offers.png" alt="Internship Offer Page" height="600" />
 
 ### 📊 Student Dashboard  
-![Student Dashboard](screenshots/student_dashboard.png)
+<img src="screenshots/student_dashboard.png" alt="Student Dashboard" height="600" />
 
 ### 👤 Student Profile  
-![Student Profile](screenshots/profile.png)
+<img src="screenshots/profile.png" alt="Student Profile" height="600" />
 
 ### ✏️ Edit Profile Page  
-![Edit Profile Page](screenshots/edit_profile.png)
+<img src="screenshots/edit_profile.png" alt="Edit Profile Page" height="600" />
 
 ### 🏢 Company Dashboard  
-![Company Dashboard](screenshots/company_dashboard.png)
+<img src="screenshots/company_dashboard.png" alt="Company Dashboard" height="600" />
 
 ### 🧾 Company Profile  
-![Company Profile](screenshots/company_profile.png)
+<img src="screenshots/company_profile.png" alt="Company Profile" height="600" />
 
 
 ### Prerequisites
@@ -86,7 +82,7 @@ Certainly! Here's the full **README.md** documentation in **one complete text** 
 ```bash
 git clone https://github.com/MontassarBr/InTurn.git
 cd InTurn/InTurn_pfa
-````
+```
 
 ### Step 2: Backend Setup
 
@@ -156,5 +152,4 @@ Through this project, we developed strong skills in:
 
 This project is intended for academic and learning purposes only.
 All rights reserved © 2025.
-
 ```
