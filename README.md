@@ -51,7 +51,7 @@ Certainly! Here's the full **README.md** documentation in **one complete text** 
 ## 📸 Screenshots
 
 ### 🔐 Login Page  
-![Login Page](screenshots/login.png)
+[![Login Page](https://github.com/MontassarBr/InTurn/blob/main/screenshots/login.png?raw=true)
 
 ### 🏠 Homepage (Student View)  
 ![Student Homepage](screenshots/student_home.png)
