@@ -1,0 +1,117 @@
+/* Card Container */
+.icCard {
+  width: 385px;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #f3f4f6;
+  padding: 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  justify-self: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.icCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.icSelected {
+  border-left: 4px solid #2563eb;
+  background-color: #f8fafc;
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.1);
+}
+
+/* Header container */
+.icHeader {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px; 
+}
+
+/* Company Logo */
+.icLogo {
+  width: 80px; 
+  height: 80px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; 
+  overflow: hidden;
+  background: #f5f7fa;
+  padding: 5px;
+}
+
+.icLogo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Internship Info */
+.icInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.icTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+}
+
+.icSalary {
+  font-size: 15px;
+  color: #666;
+  margin: 0;
+}
+
+/* Detail with icon container */
+.icDetail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  color: #4b5563;
+}
+
+.icDetail svg {
+  min-width: 16px;
+  color: #6b7280;
+}
+
+.icCompany,
+.icLocation,
+.icType {
+  font-size: 15px;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .icCard {
+    width: 100%;
+    max-width: 385px; 
+    padding: 20px; 
+  }
+
+  .icHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .icLogo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .icTitle {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,97 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  
+  .profileLayout {
+    display: flex;
+    flex: 1;
+    gap: 3rem;
+    padding: 2rem 5%;
+    max-width: 1500px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .leftSection {
+    flex: 0 0 29%;
+    max-width: 29%;
+    
+  }
+  
+  .rightSection {
+    flex: 0 0 70%;
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .profileLayout {
+      flex-direction: column;
+      padding: 1.5rem;
+    }
+  
+    .leftSection,
+    .rightSection {
+      flex: 1;
+      max-width: 90%;
+    }
+    .mainContainer{
+        overflow-x: hidden;
+    }
+  }
+  /* Skeleton Loader Styles */
+.skeletonContainer {
+  animation: skeletonLoading 1.5s infinite linear;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+}
+
+@keyframes skeletonLoading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.skeletonCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.skeletonCover {
+  height: 180px;
+  border-radius: 12px 12px 0 0;
+  margin-bottom: 4rem;
+}
+
+.skeletonAvatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.skeletonLine {
+  height: 1rem;
+  background: #f0f0f0;
+  margin: 0.5rem auto;
+  border-radius: 4px;
+}
+
+.skeletonButton {
+  height: 2.5rem;
+  background: #f0f0f0;
+  margin: 1rem 0;
+  border-radius: 8px;
+}
+

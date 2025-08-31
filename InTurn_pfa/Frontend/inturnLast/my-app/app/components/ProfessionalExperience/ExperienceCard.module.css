@@ -1,0 +1,126 @@
+/* components/ExperienceCard/ExperienceCard.module.css */
+.experienceCard {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'Inter', -apple-system, sans-serif;
+  width: 85%;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 2rem;
+}
+
+.experienceItem {
+  margin-bottom: 2rem;
+}
+
+.header {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+.companyLogo {
+  width: 75px;
+  height: 75px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid #e5e7eb;
+}
+
+.textContent {
+  flex: 1;
+}
+
+.titleWrapper {
+  margin-bottom: 0.75rem;
+}
+
+.jobTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.5rem;
+
+}
+
+.metaInfo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+.jobDescription {
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.seeMoreButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #3b82f6;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-weight: 500;
+  margin-left: auto;
+}
+
+.seeMoreButton:hover {
+  text-decoration: underline;
+}
+
+.arrowIcon {
+  font-size: 0.75rem;
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid #e5e7eb;
+  margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+
+  }
+  
+  .metaInfo {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .companyLogo {
+    width: 100%;
+    height: 68px;
+  }
+  .experienceCard{
+    width: 80%;
+  }
+  .jobTitle{
+    margin-bottom: 1.5rem;
+  }
+}

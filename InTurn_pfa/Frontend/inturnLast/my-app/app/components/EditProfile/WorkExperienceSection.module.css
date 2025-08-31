@@ -1,0 +1,253 @@
+/* ============ Base Styles ============ */
+.section {
+  width: 800px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background: white;
+  border: 1px solid #f0f0f0;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.sectionTitle {
+  font-size: 1.625rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #f5f5f5;
+  letter-spacing: -0.02em;
+}
+
+/* ============ Experience Card ============ */
+.experienceCard {
+  background: white;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  margin-bottom: 1.75rem;
+  overflow: hidden;
+  transition: 
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.experienceHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background: #fafafa;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.experienceHeader:hover {
+  background-color: #f5f5f5;
+}
+
+.headerContent h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.4;
+}
+
+.jobDetails {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.jobDetails span {
+  display: block;
+  margin-top: 0.35rem;
+}
+
+/* ============ Action Buttons ============ */
+.headerActions {
+  display: flex;
+  gap: 0.85rem;
+  margin-left: 1rem;
+}
+
+.editButton, 
+.deleteButton {
+  width: 36px;
+  height: 36px;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  color: #666;
+  font-size: 1.15rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 
+    color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.editButton:hover {
+  color: #1a73e8;
+  background-color: rgba(26, 115, 232, 0.1);
+  transform: translateY(-1px);
+}
+
+.deleteButton:hover {
+  color: #d32f2f;
+  background-color: rgba(211, 47, 47, 0.1);
+  transform: translateY(-1px);
+}
+
+/* ============ Form Styles ============ */
+.experienceForm {
+  padding: 1.5rem;
+  background: white;
+  border-top: 1px solid #f0f0f0;
+}
+
+.formGroup {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.inputField,
+.textareaField {
+  width:90%;
+  padding: 0.875rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background-color: #fdfdfd;
+  transition: 
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.textareaField {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.inputField:hover,
+.textareaField:hover {
+  border-color: #c0c0c0;
+  background-color: white;
+}
+
+.inputField:focus,
+.textareaField:focus {
+  outline: none;
+  border-color: #1a73e8;
+  box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.15);
+  background-color: white;
+}
+
+/* ============ Date Input Group ============ */
+.dateGroup {
+  display: flex;
+  gap: 1.5rem;
+  width: 95%;
+  
+}
+
+.dateGroup .formGroup {
+  flex: 1;
+  
+}
+
+/* ============ Add Button ============ */
+.addButton {
+  width: 100%;
+  padding: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: #f8f8f8;
+  border: 2px dashed #d0d0d0;
+  border-radius: 10px;
+  color: #555;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.addButton:hover {
+  background-color: #f0f0f0;
+  border-color: #a0a0a0;
+  color: #333;
+  transform: translateY(-1px);
+}
+
+.addButton svg {
+  transition: transform 0.2s ease;
+}
+
+.addButton:hover svg {
+  transform: scale(1.1);
+}
+
+/* ============ Responsive Styles ============ */
+@media (max-width: 768px) {
+  .section {
+    padding: 2rem;
+    border-radius: 14px;
+    width: 85%;
+  }
+  
+  .formGroup,
+  .inputField,
+  .textareaField {
+    width: 100%;
+  }
+  
+  .experienceHeader {
+    padding: 1.25rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .headerActions {
+    margin-left: 0;
+    align-self: flex-end;
+  }
+  
+  .dateGroup {
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 1.75rem;
+  }
+  
+  .inputField,
+  .textareaField {
+    padding: 0.75rem;
+    width: 90%;
+  }
+}

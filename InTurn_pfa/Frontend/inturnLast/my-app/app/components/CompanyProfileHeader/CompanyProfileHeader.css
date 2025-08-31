@@ -1,0 +1,207 @@
+/* app/components/CompanyProfileHeader/CompanyProfileHeader.css */
+.profile-header {
+  width: 100%;
+  position: relative;
+  margin-bottom: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cover-photo {
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+}
+
+.cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info-container {
+  padding: 1rem 2rem 2rem;
+}
+
+.profile-pic-container {
+  position: absolute;
+  top: 150px; /* 200px (cover height) - 50px (half of profile pic height) */
+  left: 2rem;
+  width: 100px;
+  height: 100px;
+  border: 4px solid white;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: white;
+  z-index: 999;
+}
+
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.company-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.company-name {
+  font-size: 2rem;
+  margin: 0;
+  color: #111827;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.owner-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.header-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.header-action-btn.edit {
+  background: #0133CCFF;
+  color: white;
+}
+
+.header-action-btn.edit:hover {
+  background: #2563eb;
+}
+
+.header-action-btn.track {
+  background: #f1f5f9;
+  color: #0133CCFF;
+  border: 1px solid #bfdbfe;
+}
+
+.header-action-btn.track:hover {
+  background: #dbeafe;
+}
+
+.follow-btn {
+  padding: 0.6rem 1.5rem;
+  background: #0133CCFF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.follow-btn:hover {
+  background: #2563eb;
+}
+
+.company-meta {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #374151;
+  font-size: 0.9rem;
+}
+
+.meta-item a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.meta-item a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .profile-info-container {
+    padding: 1rem;
+  }
+  
+  .company-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .action-buttons {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  
+  .owner-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+  
+  .header-action-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .cover-photo {
+    height: 150px;
+  }
+  
+  .profile-pic-container {
+    width: 80px;
+    height: 80px;
+    margin-top: -40px;
+  }
+  
+  .company-name {
+    font-size: 1.5rem;
+  }
+}
+.profile-info-container {
+  padding: 6rem 2rem 2rem; 
+}
+
+
+@media (max-width: 768px) {
+  .profile-info-container {
+    padding: 5rem 1rem 1rem; 
+  }
+}
+
+@media (max-width: 480px) {
+  .cover-photo {
+    height: 150px;
+  }
+
+  .profile-pic-container {
+    width: 80px;
+    height: 80px;
+    top: 110px;
+    left: 1rem;
+  }
+
+  .profile-info-container {
+    padding: 4rem 1rem 1rem; 
+  }
+}

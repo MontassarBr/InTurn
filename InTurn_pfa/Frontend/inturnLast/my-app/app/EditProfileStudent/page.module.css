@@ -1,0 +1,139 @@
+/* page.module.css */
+.editProfileContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Inter', -apple-system, sans-serif;
+    min-height: 650px;
+}
+
+.mainTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #111827;
+}
+
+.profileLayout {
+    display: flex;
+    gap: 2rem;
+}
+
+.actionButtons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.cancelButton {
+    padding: 0.75rem 1.5rem;
+    background: #f3f4f6;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9375rem;
+    color: #4b5563;
+    transition: all 0.2s ease;
+}
+
+.cancelButton:hover {
+    background: #e5e7eb;
+}
+
+.saveButton {
+    padding: 0.75rem 1.5rem;
+    background: #0133CCFF;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9375rem;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+.saveButton:hover {
+    background: #4b7dea;
+}
+
+.loading {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+    color: #64748b;
+}
+
+.profileContent {
+    flex-grow: 1;
+    max-width: 800px;
+}
+
+@media (max-width: 768px) {
+    .profileLayout {
+        flex-direction: column;
+    }
+    
+    .dateGroup {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .actionButtons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .cancelButton,
+    .saveButton {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .editProfileContainer {
+        padding: 1rem;
+    }
+    
+    .mainTitle {
+        font-size: 1.75rem;
+    }
+}
+.saveNotification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #059669;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.3s ease-out;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .saveNotification {
+        bottom: 10px;
+        right: 10px;
+        left: 10px;
+        text-align: center;
+        justify-content: center;
+    }
+}

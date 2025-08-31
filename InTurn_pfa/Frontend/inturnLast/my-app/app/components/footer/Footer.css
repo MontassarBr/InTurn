@@ -1,0 +1,103 @@
+
+.footer {
+    background-color: #000000;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+  }
+    
+  /* Footer Links */
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+    
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    transition: opacity 0.3s ease;
+  }
+    
+  .footer-links a:hover {
+    opacity: 0.8;
+    color: #1877F2;
+    transform: translateY(-2px);
+  }
+    
+  /* Social Media Section */
+  .social-media {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+    
+  /* Social Icon Styling */
+  .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Specific icon colors */
+  .facebook {
+    color: #1877F2; 
+  }
+  
+  .instagram {
+    color: #E4405F;
+  }
+  
+  .x {
+    color: white;
+  }
+    
+  .social-icon:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Specific hover colors */
+  .facebook:hover {
+    color: #0d5ab9; 
+  }
+
+  .instagram:hover {
+    color: #c13584; 
+  }
+  
+  .x:hover {
+    color: #cccccc;
+  }
+    
+  
+  .copyright {
+    font-size: 14px;
+    opacity: 0.9;
+  }
+    
+   /* Media Query for Phones */ 
+  @media (max-width: 768px) {
+    .footer-links {
+      flex-direction: column;
+      gap: 15px;
+    }
+        
+    .footer-links a {
+      margin: 0;
+    }
+        
+    .social-media {
+      margin-top: 20px;
+    }
+  }

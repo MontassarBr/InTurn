@@ -1,0 +1,395 @@
+/* Base Styles */
+.loginContainer {
+  display: flex;
+  width: 94%;
+  max-width: 1100px;
+  min-height: 820px;
+  margin: 30px auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* Form Container */
+.formContainer {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.4s ease;
+}
+
+.loginForm {
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+/* Typography */
+.loginTitle {
+  font-size: 28px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.titleUnderline {
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #1976D2;
+  margin: 12px auto 0;
+  border-radius: 3px;
+}
+
+/* Input Styles */
+.inputGroup {
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.formInput {
+  width: 84%;
+  padding: 14px 18px 14px 44px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.25s ease;
+  background: #f8fafc;
+}
+
+.formInput:focus {
+  border-color: #1976D2;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+  outline: none;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #718096;
+  font-size: 16px;
+}
+
+/* Password Toggle Styles */
+.passwordToggle {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #718096;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 15px;
+  transition: color 0.2s ease;
+  z-index: 2;
+}
+
+.passwordToggle:hover {
+  color: #1976D2;
+}
+
+/* User Type Toggle */
+.userType {
+  display: flex;
+  background: #f1f5f9;
+  border-radius: 8px;
+  padding: 5px;
+  margin: 22px 0;
+  position: relative;
+  border: 1px solid #e2e8f0;
+}
+
+.userTypeButton {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: none;
+  font-weight: 500;
+  color: #4a5568;
+  z-index: 1;
+  transition: all 0.25s ease;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.userTypeButton.activeType {
+  color: white;
+}
+
+.typeToggle {
+  position: absolute;
+  background: #1976D2;
+  height: calc(100% - 10px);
+  width: 50%;
+  border-radius: 6px;
+  transition: transform 0.25s ease;
+  top: 5px;
+  left: 5px;
+}
+
+/* Button Styles */
+.primaryButton {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #1976D2;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-top: 16px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.primaryButton:hover {
+  background: #1565c0;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(49, 130, 206, 0.2);
+}
+
+.primaryButton:disabled {
+  background: #a0aec0;
+  transform: none;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.buttonIcon {
+  font-size: 15px;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Social Auth */
+.alternativeAuth {
+  margin: 28px 0;
+  text-align: center;
+}
+
+.divider {
+  display: block;
+  color: #718096;
+  margin: 18px 0;
+  position: relative;
+  font-size: 14px;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  height: 1px;
+  background: #e2e8f0;
+}
+
+.divider::before { left: 0 }
+.divider::after { right: 0 }
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.socialButton {
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialButton.google { background: #DB4437 }
+.socialButton.apple { background: #000000 }
+.socialButton.facebook { background: #1877F2 }
+
+.socialButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Toggle Panel */
+.togglePanel {
+  flex: 0 0 42%;
+  background: linear-gradient(135deg, #1976D2, #1565c0);
+  color: white;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.panelContent {
+  text-align: center;
+  z-index: 2;
+  width: 100%;
+  max-width: 320px;
+}
+
+.panelIllustration {
+  font-size: 80px;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.panelText h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.panelText p {
+  opacity: 0.9;
+  line-height: 1.5;
+  font-size: 18px;
+  margin-bottom: 22px;
+}
+
+.featuresList {
+  margin-left: 10px;
+}
+
+.featuresList li {
+  margin-bottom: 12px;
+  font-size: 18px;
+  display: flex;
+  align-content: space-between;
+  gap: 15px;
+}
+
+.featuresList i {
+  color: #bee3f8;
+}
+
+.panelToggleButton {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.panelToggleButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Error States */
+.errorMessage {
+  color: #e53e3e;
+  background: #fed7d7;
+  padding: 12px 14px;
+  border-radius: 8px;
+  margin: 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+/* Mobile Toggle */
+.mobileToggle {
+  display: none;
+  text-align: center;
+  margin-top: 24px;
+  font-size: 14px;
+  color: #718096;
+}
+
+.mobileToggleButton {
+  background: none;
+  border: none;
+  color: #1976D2;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 6px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .loginContainer {
+    flex-direction: column;
+    min-height: 100vh;
+    border-radius: 0;
+    max-width: 100%;
+  }
+
+  .formContainer {
+    padding: 36px 28px;
+    width: 100%;
+  }
+
+  .loginTitle {
+    font-size: 26px;
+    margin-bottom: 26px;
+  }
+
+  .togglePanel {
+    display: none;
+  }
+
+  .mobileToggle {
+    display: block;
+  }
+
+  .socialButton {
+    width: 44px;
+    height: 44px;
+    font-size: 16px;
+  }
+  .formInput{
+      width: 78%;
+  }
+  .formContainer{
+      width: 85%;
+  }
+}

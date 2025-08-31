@@ -1,0 +1,138 @@
+/* components/SearchFilters/SearchFilters.module.css */
+.container {
+  width: 90%;
+  max-width: 1500px;
+  padding: 1rem;
+  box-sizing: border-box;
+  margin-right: 45px;
+  margin-left: 15px;
+}
+
+.searchTerm {
+  color: #2563eb;
+}
+
+.searchInput,
+.filterSelect {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.searchInput {
+  padding-left: 2.5rem;
+}
+
+.searchInput:focus,
+.filterSelect:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.searchRow {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.searchInputContainer {
+  position: relative;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+  cursor: pointer;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-bottom: 15px;
+}
+
+.filterGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+.resultsRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding-left: 15px;
+}
+
+.clearButton {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.clearButton:hover {
+  background-color: #f0f5ff;
+}
+
+.clearButton:disabled {
+  color: #9ca3af;
+  cursor: not-allowed;
+  background: none;
+}
+
+@media (min-width: 640px) {
+  .searchRow {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 1.5rem;
+  }
+  
+  .filtersContainer {
+    display: flex;
+    flex: 1;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .searchInputContainer {
+    flex: 0.47;
+    min-width: 200px;
+    margin-right: 45px;
+  }
+
+  .filterGroup {
+    flex: 1;
+    min-width: 150px;
+    max-width: 400px;
+    margin-bottom: 0px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .filtersContainer {
+    gap: 1.5rem;
+  }
+}

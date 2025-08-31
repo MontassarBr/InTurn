@@ -1,0 +1,200 @@
+/* Base Styles */
+.container {
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-right: 35px;
+    font-family: 'Inter', -apple-system, sans-serif;
+  }
+  
+  /* Typography */
+  .title {
+    font-size: 2rem;
+    margin: 0;
+    font-family: 'Inter', -apple-system, sans-serif;
+    line-height: 36px;
+    font-weight: 700;
+    color: #171A1F;
+  }
+  
+  .salary {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #0f3dc9;
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem;
+    color: #1e293b;
+    margin: 0 0 1rem 0;
+  }
+  
+  .description {
+    color: #475569;
+    line-height: 1.6;
+  }
+  
+  /* Layout Components */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .headerRight {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+  }
+  
+  .meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .tagsActionsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+  }
+  
+  .tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  /* Interactive Elements */
+  .actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .saveButton,
+  .applyButton {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .saveButton {
+    background: #f1f5f9;
+    color: #0133CCFF;
+  }
+  
+  .saveButton:hover {
+    background: #e2e8f0;
+  }
+  
+  .applyButton {
+    background: #0133CCFF;
+    color: white;
+  }
+  
+  .applyButton:hover {
+    background: #3965df;
+  }
+  
+  /* Icons & Misc */
+  .icon,
+  .buttonIcon {
+    color: #94a3b8;
+    font-size: 1rem;
+    padding-right: 5px;
+  }
+  
+  .checkIcon {
+    color: #2659ef;
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+  }
+  
+  .tag {
+    background: #f1f5f9;
+    color: #334155;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  .divider {
+    border: 0;
+    border-top: 1px solid #e2e8f0;
+    margin: 2rem 0;
+  }
+  
+  .responsibilities {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .responsibilityItem {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    color: #475569;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .container {
+      padding: 1.5rem;
+    }
+  
+    .header,
+    .meta {
+      flex-direction: column;
+    }
+  
+    .header {
+      gap: 1.5rem;
+      flex-direction: row;
+
+    }
+    .tagsActionsContainer {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 1.5rem;
+    }
+  
+    .actions {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .saveButton,
+    .applyButton {
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .title {
+      font-size: 1.75rem;
+    }
+  
+    .salary {
+      font-size: 1.25rem;
+    }
+  
+    .meta {
+      gap: 0.75rem;
+    }
+  }

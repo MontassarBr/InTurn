@@ -1,0 +1,62 @@
+/* components/SkillSection/SkillSection.module.css */
+.skillSection {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'Inter', -apple-system, sans-serif;
+  width: 85%;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1.5rem;
+}
+
+.skillList {
+  display: grid;
+  grid-template-columns: 1;
+  gap: 1rem;
+}
+
+.skillItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background-color: #f8fafc;
+  border-radius: 8px;
+}
+
+.checkCircle {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #3b82f6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.checkIcon {
+  color: #3b82f6;
+  font-size: 0.75rem;
+}
+
+.skillName {
+  font-weight: 600;
+  color: #111827;
+}
+
+@media (max-width: 768px) {
+  .skillSection {
+    padding: 1.5rem;
+  }
+  
+  .skillList {
+    grid-template-columns: 1fr;
+  }
+}

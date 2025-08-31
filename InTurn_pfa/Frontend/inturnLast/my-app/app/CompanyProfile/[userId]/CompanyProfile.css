@@ -1,0 +1,238 @@
+/* Main container */
+.company-profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #333;
+  padding: 1rem;
+}
+
+/* Main content padding */
+.profile-content {
+  padding: 2rem;
+}
+
+/* Action Buttons */
+.company-action-buttons {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  justify-content: center;
+}
+
+.company-edit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #0748d4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.company-edit-button:hover {
+  background-color: #1d4ed8;
+}
+
+.company-track-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #ffffff;
+  color: #0748d4;
+  border: 1px solid #0748d4;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.company-track-button:hover {
+  background-color: #f1f5ff;
+}
+
+.button-icon {
+  font-size: 1rem;
+}
+
+/* Section container */
+.profile-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+/* Two-column layout for larger screens */
+.two-column-layout {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Left column - company description */
+.left-column {
+  flex: 2;
+}
+
+/* Right column - feedback section */
+.right-column {
+  flex: 1;
+}
+
+/* Gallery styles in left column */
+.left-column .company-gallery {
+  margin-top: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.left-column .gallery-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.left-column .gallery-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.8rem;
+  overflow: hidden;
+  position: relative;
+  min-height: 180px;
+}
+
+.left-column .gallery-item {
+  width: calc(50% - 0.4rem);
+  height: 180px;
+}
+
+.left-column .gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .profile-content {
+    padding: 0 0.5rem;
+  }
+  
+  .profile-sections {
+    gap: 1.5rem;
+  }
+  
+  .two-column-layout {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .company-action-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 0 1rem;
+  }
+  
+  .company-edit-button,
+  .company-track-button {
+    width: 100%;
+  }
+
+  .left-column .company-gallery {
+    margin-top: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .left-column .gallery-item {
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .left-column .gallery-item {
+    height: 140px;
+  }
+}
+
+/* Header styles */
+.company-profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.company-profile-header .company-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-top: 1rem;
+}
+
+.company-profile-header .location,
+.company-profile-header .work-days {
+  color: #666;
+  font-size: 1rem;
+  margin: 0.2rem 0;
+}
+
+.company-profile-header .website {
+  font-size: 1rem;
+  color: #1877f2;
+  text-decoration: none;
+  margin-top: 0.5rem;
+}
+
+.company-profile-header .website:hover {
+  text-decoration: underline;
+}
+
+/* Internship list styles */
+.internship-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.internship-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.internship-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.internship-card .salary {
+  color: #1877f2;
+  font-weight: 600;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #64748b;
+}

@@ -1,0 +1,49 @@
+/* Latest Internships Section */
+.latest-internships {
+  padding: 40px 20px;
+  background-color: #fff; 
+  text-align: center; 
+  font-family: 'Poppins', sans-serif; 
+}
+
+.section-title {
+  color: #0133CCFF; 
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif; 
+}
+
+.section-description {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 30px; 
+  font-family: 'Poppins', sans-serif; 
+}
+
+/* Internship Cards Grid */
+.internship-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(385px, 1fr)); 
+  gap: 40px; 
+  max-width: 1300px; 
+  margin: 0 auto; /* Center the grid */
+  padding: 0 30px; 
+  justify-items: center; /* Center items horizontally within grid cells */
+}
+
+ /*Media query for smaller screens*/
+ 
+@media (max-width: 768px) {
+  .internship-grid {
+    grid-template-columns: 1fr; /* 1 card per row */
+    gap: 30px; /* Slightly reduced gap for mobile but still spacious */
+  }
+  
+  .section-title {
+    font-size: 2rem; /* Smaller title */
+  }
+  
+  .section-description {
+    font-size: 0.9rem; /* Adjust description text */
+  }
+}

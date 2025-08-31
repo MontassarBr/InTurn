@@ -1,0 +1,200 @@
+.applications-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.applications-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+.table-container {
+  overflow-x: auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.applications-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.applications-table th {
+  background-color: #f8f9fa;
+  color: #495057;
+  padding: 12px 15px;
+  font-weight: 600;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.applications-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e9ecef;
+  color: #212529;
+}
+
+.applications-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.applications-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.user-cell {
+  min-width: 200px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e9ecef;
+}
+
+.download-button {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.download-button:hover {
+  background-color: #5a6268;
+}
+
+/* Updated Dropdown Styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  min-width: 100px;
+  transition: background-color 0.2s;
+}
+
+.dropdown-button:hover {
+  background-color: #0069d9;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 100%; /* Position above the button by default */
+  background-color: white;
+  min-width: 120px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* When dropdown needs to appear below */
+.dropdown-content.show {
+  display: block;
+}
+
+/* When dropdown needs to appear above (default) */
+.dropdown-content.show {
+  bottom: 100%;
+  top: auto;
+}
+
+/* Fallback for when there's not enough space above */
+.dropdown-content.show.bottom-up {
+  bottom: auto;
+  top: 100%;
+}
+
+.dropdown-content button {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.accept-button {
+  background-color: white;
+  color: #28a745;
+}
+
+.accept-button:hover {
+  background-color: #e8f5e9;
+}
+
+.reject-button {
+  background-color: white;
+  color: #dc3545;
+}
+
+.reject-button:hover {
+  background-color: #ffebee;
+}
+
+.status-text {
+  font-weight: 500;
+}
+
+.accepted-row {
+  background-color: rgba(40, 167, 69, 0.1);
+}
+
+.rejected-row {
+  background-color: rgba(220, 53, 69, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .applications-container {
+    padding: 10px;
+  }
+
+  .applications-table th,
+  .applications-table td {
+    padding: 10px;
+  }
+
+  .user-avatar {
+    width: 30px;
+    height: 30px;
+  }
+
+  .dropdown-button {
+    padding: 4px 8px;
+  }
+
+  .dropdown-content button {
+    padding: 8px 10px;
+  }
+}

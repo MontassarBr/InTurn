@@ -1,0 +1,403 @@
+/* Base Styles */
+.dashboard {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  line-height: 1.5;
+  overflow-x: hidden;
+  min-height: 650px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Section Styles */
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sectionTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+/* Application Count */
+.applicationCount {
+  font-size: 16px;
+  font-weight: normal;
+  color: #64748b;
+  margin-left: 8px;
+}
+
+/* Resume Section */
+.resumeSection {
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.resumeName {
+  font-size: 14px;
+  color: #666;
+  background: #f0f0f0;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.resumeActions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.fileInput {
+  display: none;
+}
+
+/* Button Styles */
+.uploadButton,
+.viewButton,
+.removeButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.uploadButton {
+  background-color: #2563eb;
+  color: white;
+}
+
+.uploadButton:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.viewButton {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+.viewButton:hover {
+  background-color: #e5e7eb;
+}
+
+.removeButton {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.removeButton:hover {
+  background-color: #fecaca;
+}
+
+.viewButton:disabled,
+.removeButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.buttonIcon {
+  font-size: 16px;
+}
+
+/* Applications Table */
+.applicationsSection {
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.tableContainer {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.applicationsTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.tableHeader {
+  padding: 16px;
+  background-color: #f3f4f6;
+  font-weight: 600;
+  color: #374151;
+  text-align: left;
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.tableRow {
+  border-bottom: 1px solid #e5e7eb;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.tableRow:last-child {
+  border-bottom: none;
+}
+
+.tableRow:hover {
+  background-color: #f8fafc;
+  transform: translateX(4px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.tableRow:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.tableRow:active {
+  transform: scale(0.98);
+}
+
+.tableCell {
+  padding: 16px;
+  color: #4b5563;
+}
+
+.companyCell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+}
+
+.companyLogo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.companyName {
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.statusCell {
+  padding: 16px;
+}
+
+.statusBadge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 80px;
+  text-align: center;
+  transition: all 0.15s ease;
+}
+
+.statusPending {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.statusRejected {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.statusAccepted {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+/* Mobile Applications View */
+.mobileApplications {
+  display: none;
+  gap: 16px;
+  flex-direction: column;
+}
+
+.applicationCard {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.applicationCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.applicationCard:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.applicationCard:active {
+  transform: scale(0.98);
+}
+
+.applicationCard::after {
+  content: "→";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+  opacity: 0.6;
+}
+
+.cardHeader {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.cardTitle {
+  font-size: 14px;
+  color: #4b5563;
+  margin: 4px 0 0 0;
+}
+
+.cardDetails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.detailItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.detailLabel {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+/* Loading and Error States */
+.loading {
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #64748b;
+}
+
+.error {
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #dc2626;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 24px 16px;
+  }
+  
+  .content {
+    gap: 32px;
+  }
+  
+  .resumeSection,
+  .applicationsSection {
+    padding: 20px;
+  }
+  
+  .sectionTitle {
+    font-size: 20px;
+    padding: 15px;
+  }
+  
+  .resumeActions {
+    flex-direction: column;
+  }
+  
+  .uploadButton,
+  .viewButton,
+  .removeButton {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .uploadButton {
+    width: 87%;
+  }
+  
+  .sectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .tableContainer {
+    display: none;
+  }
+  
+  .mobileApplications {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .tableHeader,
+  .tableCell {
+    padding: 12px 8px;
+    font-size: 14px;
+  }
+  
+  .companyLogo {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .sectionTitle {
+    font-size: 18px;
+  }
+  
+  .applicationCount {
+    font-size: 14px;
+  }
+  
+  .applicationCard {
+    padding: 12px;
+  }
+  
+  .cardDetails {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,247 @@
+/* ProfileCard.module.css */
+.profileCard {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+/* Cover Photo Section */
+.coverContainer {
+  position: relative;
+  height: 180px;
+}
+
+.coverPhoto {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.profilePictureContainer {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid white;
+  background: white;
+  overflow: hidden;
+}
+
+.profilePicture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Profile Info */
+.profileInfo {
+  padding: 60px 2rem 2rem;
+  text-align: center;
+}
+
+.name {
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem 0;
+  color: #0748d4;
+}
+
+.title {
+  font-size: 1.2rem;
+  margin: 0 0 1rem 0;
+  color: #000000;
+  font-weight: 500;
+}
+
+.bio {
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Action Buttons */
+.actionButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.editButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #0133CCFF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.editButton:hover {
+  background-color: #537ced;
+}
+
+.trackButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #ffffff;
+  color: #0133CCFF;
+  border: 1px solid #0748d4;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.trackButton:hover {
+  background-color: #f1f5ff;
+}
+
+/* Skills */
+.skillsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.skill {
+  background: #f1f5f9;
+  color: #334155;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Profile Link */
+.profileLinkSection {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.profileLinkLabel {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #64748b;
+  text-align: left;
+  font-weight: 500;
+}
+
+.linkInputContainer {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.linkInput {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: none;
+  font-size: 0.9rem;
+  color: #475569;
+  background: #f8fafc;
+  text-align: center;
+}
+
+.linkInput:focus {
+  outline: none;
+}
+
+.copyButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f1f5f9;
+  border: none;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 80px;
+}
+
+.copyButton:hover {
+  background: #e2e8f0;
+}
+
+.copyIcon {
+  color: #64748b;
+}
+
+.copyText {
+  font-size: 0.9rem;
+  color: #334155;
+}
+
+.copyButton.copied {
+  background: #dcfce7;
+}
+
+.copyButton.copied .copyIcon {
+  color: #16a34a;
+}
+
+.copyButton.copied .copyText {
+  color: #166534;
+}
+
+/* Animation for notification */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.copyNotification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #16a34a;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease-out;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .profileCard {
+    border-radius: 0;
+  }
+  
+  .coverContainer {
+    height: 150px;
+  }
+  
+  .profilePictureContainer {
+    width: 80px;
+    height: 80px;
+    bottom: -40px;
+  }
+  
+  .copyButton {
+    padding: 0.8rem 0.3rem;
+  }
+}
