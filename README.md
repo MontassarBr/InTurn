@@ -1,7 +1,7 @@
 
 # InTurn – Internship Management Platform
 
-> 🚀 A full-stack web platform developed to simplify and optimize the internship application and recruitment process for students and companies.
+🚀 A full-stack web platform developed to simplify and optimize the internship application and recruitment process for students and companies.
 
 ## 📘 Overview
 
@@ -46,29 +46,26 @@
 
 ## 📸 Screenshots
 
-### 🔐 SignUp Page  
-<img src="screenshots/login.png" alt="Login Page" height="600" />
-
-### 🏠 Homepage (Student View)  
-<img src="screenshots/student_home.png" alt="Student Homepage" height="600" />
-
-### 📝 Internship Offer Page  
-<img src="screenshots/offers.png" alt="Internship Offer Page" height="600" />
-
-### 📊 Student Dashboard  
-<img src="screenshots/student_dashboard.png" alt="Student Dashboard" height="600" />
-
-### 👤 Student Profile  
-<img src="screenshots/profile.png" alt="Student Profile" height="600" />
-
-### ✏️ Edit Profile Page  
-<img src="screenshots/edit_profile.png" alt="Edit Profile Page" height="600" />
-
-### 🏢 Company Dashboard  
-<img src="screenshots/company_dashboard.png" alt="Company Dashboard" height="600" />
-
-### 🧾 Company Profile  
-<img src="screenshots/company_profile.png" alt="Company Profile" height="600" />
+<p align="center">
+<img src="screenshots/screenshot1.png" alt="Login Page" height="600" width="49%" />
+<img src="screenshots/screenshot2.png" alt="Student Homepage" height="600" width="49%" />
+</p>p
+<p align="center">
+<img src="screenshots/screenshot3.png" alt="Internship Offer Page" height="600" width="49%"/>
+<img src="screenshots/screenshot4.png" alt="Student Dashboard" height="600" width="49%"/>
+</p>
+<p align="center">
+<img src="screenshots/screenshot5.png" alt="Internship Offer Page" height="600" width="49%"/>
+<img src="screenshots/screenshot6.png" alt="Student Dashboard" height="600" width="49%"/>
+</p>
+<p align="center">
+<img src="screenshots/screenshot7.png" alt="Internship Offer Page" height="600" width="49%"/>
+<img src="screenshots/screenshot8.png" alt="Student Dashboard" height="600" width="49%"/>
+</p>
+<p align="center">
+<img src="screenshots/screenshot9.png" alt="Internship Offer Page" height="600" width="49%"/>
+<img src="screenshots/screenshot10.png" alt="Student Dashboard" height="600" width="49%"/>
+</p>
 
 
 ### Prerequisites
@@ -104,7 +101,7 @@ PORT=5000
 Then run the backend server:
 
 ```bash
-npm run dev
+node src/server
 ```
 
 ### Step 3: Frontend Setup
