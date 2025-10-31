@@ -47,24 +47,24 @@
 ## 📸 Screenshots
 
 <p align="center">
-<img src="screenshots/screenshot1.jfif" alt="Login Page" height="600" width="49%" />
-<img src="screenshots/screenshot2.jfif" alt="Student Homepage" height="600" width="49%" />
+<img src="screenshots/screenshot1.png" alt="Login Page" height="600" width="49%" />
+<img src="screenshots/screenshot2.png" alt="Student Homepage" height="600" width="49%" />
 </p>
 <p align="center">
-<img src="screenshots/screenshot3.jfif" alt="Internship Offer Page" height="600" width="49%"/>
-<img src="screenshots/screenshot4.jfif" alt="Student Dashboard" height="600" width="49%"/>
+<img src="screenshots/screenshot3.png" alt="Internship Offer Page" height="600" width="49%"/>
+<img src="screenshots/screenshot4.png" alt="Student Dashboard" height="600" width="49%"/>
 </p>
 <p align="center">
-<img src="screenshots/screenshot5.jfif" alt="Internship Offer Page" height="600" width="49%"/>
-<img src="screenshots/screenshot6.jfif" alt="Student Dashboard" height="600" width="49%"/>
+<img src="screenshots/screenshot5.png" alt="Internship Offer Page" height="600" width="49%"/>
+<img src="screenshots/screenshot6.png" alt="Student Dashboard" height="600" width="49%"/>
 </p>
 <p align="center">
-<img src="screenshots/screenshot7.jfif" alt="Internship Offer Page" height="600" width="49%"/>
-<img src="screenshots/screenshot8.jfif" alt="Student Dashboard" height="600" width="49%"/>
+<img src="screenshots/screenshot7.png" alt="Internship Offer Page" height="600" width="49%"/>
+<img src="screenshots/screenshot8.png" alt="Student Dashboard" height="600" width="49%"/>
 </p>
 <p align="center">
-<img src="screenshots/screenshot9.jfif" alt="Internship Offer Page" height="600" width="49%"/>
-<img src="screenshots/screenshot10.jfif" alt="Student Dashboard" height="600" width="49%"/>
+<img src="screenshots/screenshot9.png" alt="Internship Offer Page" height="600" width="49%"/>
+<img src="screenshots/screenshot10.png" alt="Student Dashboard" height="600" width="49%"/>
 </p>
 👉 More screenshots are available in the **`screenshots`** folder.
 
