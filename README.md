@@ -52,7 +52,7 @@
 </p>
 <p align="center">
 <img src="screenshots/screenshot3.png" alt="Internship Offer Page" height="600" width="49%"/>
-<img src="screenshots/screenshot4.png" alt="Student Dashboard" height="600" width="49%"/>
+<img src="screenshots/screenshot4.jpg" alt="Student Dashboard" height="600" width="49%"/>
 </p>
 <p align="center">
 <img src="screenshots/screenshot5.png" alt="Internship Offer Page" height="600" width="49%"/>
